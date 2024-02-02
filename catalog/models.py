@@ -20,4 +20,4 @@ class Song(models.Model):
     title = models.CharField(max_length=100)
     album = models.ForeignKey('Album', on_delete=models.CASCADE)
     lyrics = models.TextField(null=True, blank=True, help_text='Lyrics of the song')
-    duration = models.TimeField()
+    duration = models.FloatField(default=0, blank=True)
